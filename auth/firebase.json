@@ -4,13 +4,7 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "facebook*",
-      "google*",
-      "github*",
-      "phone*",
-      "twitter*",
-      "chromextension"
+      "**/node_modules/**"
     ]
   }
 }
