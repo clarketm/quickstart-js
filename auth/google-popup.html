@@ -30,9 +30,22 @@ limitations under the License.
   <!-- Import and configure the Firebase SDK -->
   <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
   <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
-  <script src="/__/firebase/4.0.0/firebase-app.js"></script>
-  <script src="/__/firebase/4.0.0/firebase-auth.js"></script>
-  <script src="/__/firebase/init.js"></script>
+  <!-- <script src="/__/firebase/4.0.0/firebase-app.js"></script> -->
+  <!-- <script src="/__/firebase/4.0.0/firebase-auth.js"></script> -->
+  <!-- <script src="/__/firebase/init.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB7A4gX6qjvHE3l2mjPba_NYwuvjEgIwJw",
+    authDomain: "resume-1298.firebaseapp.com",
+    databaseURL: "https://resume-1298.firebaseio.com",
+    projectId: "resume-1298",
+    storageBucket: "resume-1298.appspot.com",
+    messagingSenderId: "481029691096"
+  };
+  firebase.initializeApp(config);
+</script>
 
   <script type="text/javascript">
 
@@ -46,7 +59,7 @@ limitations under the License.
         var provider = new firebase.auth.GoogleAuthProvider();
         // [END createprovider]
         // [START addscopes]
-        provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+        provider.addScope('https://www.googleapis.com/auth/blogger.readonly');
         // [END addscopes]
         // [START signin]
         firebase.auth().signInWithPopup(provider).then(function(result) {
